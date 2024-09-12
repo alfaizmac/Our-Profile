@@ -1,5 +1,3 @@
-// script.js
-
 function moveSlide(step, sliderId) {
     const slider = document.getElementById(sliderId);
     const slideContainer = slider.querySelector('.slide-container');
