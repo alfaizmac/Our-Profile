@@ -505,6 +505,8 @@ footer {
     width: 350px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    
 }
 
 .preview-img {
@@ -534,32 +536,36 @@ footer {
     text-decoration: underline;
 }
 
-#fade, #fade1, #fade2 {
+#fade{
     opacity: 0 ;
+    transition: opacity 1.5s ease-in;
    
 
 }
+#fade.visible { 
 
-#fade {
-
-    transition: opacity 1.5s ease-in;
+    opacity: 1;
 
 }
 
 #fade1 {
-
-    transition: opacity 1.5s ease-in;
+    
+    opacity: 0; /* Start fully transparent */
+    transform: translateX(-50px); /* Start slightly off-screen to the right */
+    transition: opacity 1.5s ease-in, transform 1s ease-out; /* Fade-in and slight movement */
     
 }
+
 
 #fade2 {
 
-    transition: opacity 1.5s ease-in;
+    opacity: 0; /* Start fully transparent */
+    transform: translateX(50px); /* Start slightly off-screen to the right */
+    transition: opacity 1.5s ease-in, transform 1s ease-out; /* Fade-in and slight movement */
     
 }
 
-#fade.visible, #fade1.visible, #fade2.visible  { 
-
-    opacity: 1;
-
+#fade1.visible, #fade2.visible {
+    opacity: 1; /* Fully visible */
+    transform: translateX(0); /* Moves to its normal position */
 }

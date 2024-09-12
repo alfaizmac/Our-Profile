@@ -64,6 +64,8 @@ function fade(){
     fade.classList.add('visible');
     fade1.classList.add('visible');
     fade2.classList.add('visible');
+
+
 }
 window.onload = fade;
 
